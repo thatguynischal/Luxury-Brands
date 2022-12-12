@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+}
+.popop {
+  width: 0.3px;
+}
+.hero-section {
+  height: 90vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.projects {
+  background: url(../public/Vector.png);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  font-family: "Poppins", sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  word-break: break-all;
 }
 
-.App-link {
-  color: #61dafb;
+.bloc-tabs {
+  display: flex;
+}
+.tabs {
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+  width: fit-content;
+  background: #393e46;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  position: relative;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active-tabs {
+  background: #00adb5;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+}
+
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  background: transparent;
+  padding: 20px;
+  display: none;
+}
+
+.active-content {
+  display: block;
 }
